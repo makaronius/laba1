@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+function  count() {
+var x = document.getElementById("x").value;
+    
+var n = document.getElementById("n").value;
+sum=0;
+for(i=0;i<=n;i++){
+
+sum+= Math.pow(-1,i)*Math.pow(x,2*i)/(fact_iter(i))
+
+}  
+document.write(sum) 
+}
+function fact_iter(a) {
+var result = 1;
+for (i = 1; i <= a; i++) {result = result * i;}
+return result;
+}
+</script>
+<div class="center">
+<form action="#">
+<div ><p class="inline-block">Введите значение x</p>
+<input type="text" name="" id="x"></div>
+<div ><p class="inline-block">Введите значение n</p>
+<input type="text" name="" id="n"></div>
+<button onclick="count();">Вычислить</button>
+</form>
+</div>
+</body>
+</html>
